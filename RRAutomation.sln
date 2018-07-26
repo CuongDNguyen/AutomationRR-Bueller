@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RRAutomation", "RRAutomation\RRAutomation.csproj", "{64AC8176-ED28-441D-BFE8-0962E5EA6499}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuellerAutomation", "BuellerAutomation\BuellerAutomation.csproj", "{7B2FDA44-DE7D-4C44-8458-750D383CFA43}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{64AC8176-ED28-441D-BFE8-0962E5EA6499}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64AC8176-ED28-441D-BFE8-0962E5EA6499}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64AC8176-ED28-441D-BFE8-0962E5EA6499}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B2FDA44-DE7D-4C44-8458-750D383CFA43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B2FDA44-DE7D-4C44-8458-750D383CFA43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B2FDA44-DE7D-4C44-8458-750D383CFA43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B2FDA44-DE7D-4C44-8458-750D383CFA43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

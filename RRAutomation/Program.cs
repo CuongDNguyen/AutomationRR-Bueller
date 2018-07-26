@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestaurantReviewsAutomation.TestSuites;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,12 @@ namespace RRAutomation
     {
         static void Main(string[] args)
         {
+           RestaurantsPageTestSuite.CreateRestaurantsTestCase();
+           RestaurantsPageTestSuite.AddReviewsTestCase();
+           RestaurantsPageTestSuite.SortByTestCase();
+           RestaurantsPageTestSuite.SearchRestaurantsTestCase();
+           RestaurantsPageTestSuite.EditRestaurantsTestCase();
+           RestaurantsPageTestSuite.DeleteRestaurantsTestCase();
         }
     }
 }
