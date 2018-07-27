@@ -15,6 +15,14 @@ namespace BuellerAutomation.TestSuites
             RegisterPage.goRegisterPage();
             RegisterPage.registerNewStudent();
             RegisterPage.registerNewFreshman();
+            RegisterPage.logout();
+        }
+        public static void registerTeacherTestCase()
+        {
+            RegisterPage.goBuellerWebsite();
+            RegisterPage.goRegisterPage();
+            RegisterPage.registerNewTeacher();
+            RegisterPage.registerTeacherInformation();
         }
     }
 }

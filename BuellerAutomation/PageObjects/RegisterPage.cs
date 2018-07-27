@@ -16,6 +16,7 @@ namespace BuellerAutomation.PageObjects
         public static string BuellerWebsite = "localhost:58469";
         public IWebDriver _driver;
         private static IWebDriver driver = new ChromeDriver(@SystemElements.chromeDriverPath);
+        public static IWebElement logoutButton { get; set; }
         public static IWebElement registerTab { get; set; }
         public static IWebElement register_Email { get; set; }
         public static IWebElement register_Password { get; set; }
@@ -32,6 +33,9 @@ namespace BuellerAutomation.PageObjects
         public static IWebElement register_PhoneNumber { get; set; }
         public static IWebElement register_ClassLevel { get; set; }
         public static IWebElement register_InformationButton { get; set; }
+        public static IWebElement register_Title {get; set;}
+        public static IWebElement register_OfficeNumber { get; set; }
+        public static IWebElement register_OfficePhoneNumber { get; set; }
         public RegisterPage(IWebDriver driver)
         {
             this._driver = driver;
@@ -97,6 +101,69 @@ namespace BuellerAutomation.PageObjects
             Thread.Sleep(2000);
             register_InformationButton.Click();
             return new RegisterPage(driver);
+        }
+        public static RegisterPage registerNewTeacher()
+        {
+            var wait = new WebDriverWait(driver, new TimeSpan(0, 0, 10));
+            var loading = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible((By.XPath("/html/body/div[2]/form/div/div[4]/div/input"))));
+            register_Email = driver.FindElement(By.Id("Email"));
+            register_Password = driver.FindElement(By.Id("Password"));
+            register_Role = driver.FindElement(By.Id("role"));
+            register_Button = driver.FindElement(By.XPath("/html/body/div[2]/form/div/div[4]/div/input"));
+            register_Email.SendKeys("teachernewauto1234@ruralsourcing.com");
+            register_Password.SendKeys("automation123!123");
+            SelectElement roleDropDown = new SelectElement(register_Role);
+            roleDropDown.SelectByText("teacher");
+            Thread.Sleep(2000);
+            register_Button.Click();
+            return new RegisterPage(driver);
+        }
+        public static RegisterPage registerTeacherInformation()
+        {
+            var wait = new WebDriverWait(driver, new TimeSpan(0, 0, 10));
+            var loading = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible((By.XPath("/html/body/div[2]/form/div/div[13]/div/input"))));
+            register_InformationButton = driver.FindElement(By.XPath("/html/body/div[2]/form/div/div[13]/div/input"));
+            register_Title = driver.FindElement(By.Id("Title"));
+            register_Title.SendKeys("Professor");
+            register_FirstName = driver.FindElement(By.Id("FirstName"));
+            register_FirstName.SendKeys("TeacherAutomation");
+            register_MiddleName = driver.FindElement(By.Id("MiddleName"));
+            register_MiddleName.SendKeys("Knowledge");
+            register_LastName = driver.FindElement(By.Id("LastName"));
+            register_LastName.SendKeys("Instructor");
+            register_OfficeNumber = driver.FindElement(By.Id("OfficeNumber"));
+            register_OfficeNumber.SendKeys("41");
+            register_Street = driver.FindElement(By.Id("Street"));
+            register_Street.SendKeys("723 Silver Ave NW");
+            register_City = driver.FindElement(By.Id("City"));
+            register_City.SendKeys("Albuquerque");
+            register_State = driver.FindElement(By.Id("State"));
+            register_State.SendKeys("New Mexico");
+            register_Country = driver.FindElement(By.Id("Country"));
+            register_Country.SendKeys("United States");
+            register_ZipCode = driver.FindElement(By.Id("Zipcode"));
+            register_ZipCode.SendKeys("87120");
+            register_PhoneNumber = driver.FindElement(By.Id("PersonalPhoneNumber"));
+            register_PhoneNumber.SendKeys("(504) 819-2301");
+            register_OfficePhoneNumber = driver.FindElement(By.Id("OfficePhoneNumber"));
+            register_OfficePhoneNumber.SendKeys("(827) 312-4592");
+            Thread.Sleep(2000);
+            register_InformationButton.Click();
+
+            return new RegisterPage(driver);
+        }
+
+        public static RegisterPage logout()
+        {
+            var wait = new WebDriverWait(driver, new TimeSpan(0, 0, 10));
+            var loading = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible((By.PartialLinkText("Logout"))));
+            logoutButton = driver.FindElement(By.PartialLinkText("Logout"));
+            logoutButton.Click();
+            return new RegisterPage(driver);
+        }
+        public static void quitBrowser()
+        {
+            driver.Quit();
         }
     }
 }
