@@ -72,6 +72,7 @@ namespace BuellerAutomation.PageObjects
         {
             var wait = new WebDriverWait(driver, new TimeSpan(0, 0, 10));
             var loading = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.PartialLinkText("All Classes")));
+            allClassesTab = driver.FindElement(By.PartialLinkText("All Classes"));
             allClassesTab.Click();
             return new AllClassesPage(driver);
         }
@@ -99,9 +100,13 @@ namespace BuellerAutomation.PageObjects
             SelectElement subjectDropdown = new SelectElement(create_Subject);
             subjectDropdown.SelectByIndex(0);
             create_Name = driver.FindElement(By.Id("Name"));
+            create_Name.SendKeys("Afternoon automation");
             create_Section = driver.FindElement(By.Id("Section"));
+            create_Section.SendKeys("101");
             create_Credits = driver.FindElement(By.Id("Credits"));
+            create_Credits.SendKeys("3");
             create_Description = driver.FindElement(By.Id("Description"));
+            create_Description.SendKeys("Welcome to automation!");
             create_Mon = driver.FindElement(By.Id("Mon"));
             SelectElement monDropdown = new SelectElement(create_Mon);
             monDropdown.SelectByValue("0");
@@ -118,9 +123,9 @@ namespace BuellerAutomation.PageObjects
             SelectElement friDropdown = new SelectElement(create_Fri);
             friDropdown.SelectByValue("1");
             create_StartTime = driver.FindElement(By.Id("StartTime"));
-            create_StartTime.SendKeys("100PM");
+            create_StartTime.SendKeys("200PM");
             create_EndTime = driver.FindElement(By.Id("EndTime"));
-            create_EndTime.SendKeys("200PM");
+            create_EndTime.SendKeys("300PM");
             create_Room = driver.FindElement(By.Id("RoomNumber"));
             create_Room.SendKeys("252");
             Thread.Sleep(2000);
