@@ -12,9 +12,10 @@ namespace BuellerAutomation
         static void Main(string[] args)
         {
             //RegisterPageTestSuite.registerStudentTestCase();
-            RegisterPageTestSuite.registerTeacherTestCase();
+            //RegisterPageTestSuite.registerTeacherTestCase();
             //ProfilePageTestSuite.editProfileTestCase();
             //MyTeachersPageTestSuite.viewTeachersPageTestCase();
+            AllClassesTestSuite.addnewClassTestCase();
         }
     }
 }

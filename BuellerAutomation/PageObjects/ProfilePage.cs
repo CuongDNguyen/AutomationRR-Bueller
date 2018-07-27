@@ -65,6 +65,19 @@ namespace BuellerAutomation.PageObjects
             login_Button.Click();
             return new ProfilePage(driver);
         }
+        public static ProfilePage teacherLogin()
+        {
+            var wait = new WebDriverWait(driver, new TimeSpan(0, 0, 10));
+            var loading = wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.Id("btnSubmit")));
+            login_Email = driver.FindElement(By.Id("email"));
+            login_Password = driver.FindElement(By.Id("Password"));
+            login_Button = driver.FindElement(By.Id("btnSubmit"));
+            login_Email.SendKeys("teachernewauto31234@ruralsourcing.com");
+            login_Password.SendKeys("automation123!123");
+            Thread.Sleep(2000);
+            login_Button.Click();
+            return new ProfilePage(driver);
+        }
 
         public static ProfilePage goProfilePage()
         {

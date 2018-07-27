@@ -110,7 +110,7 @@ namespace BuellerAutomation.PageObjects
             register_Password = driver.FindElement(By.Id("Password"));
             register_Role = driver.FindElement(By.Id("role"));
             register_Button = driver.FindElement(By.XPath("/html/body/div[2]/form/div/div[4]/div/input"));
-            register_Email.SendKeys("teachernewauto1234@ruralsourcing.com");
+            register_Email.SendKeys("teachernewauto31234@ruralsourcing.com");
             register_Password.SendKeys("automation123!123");
             SelectElement roleDropDown = new SelectElement(register_Role);
             roleDropDown.SelectByText("teacher");
