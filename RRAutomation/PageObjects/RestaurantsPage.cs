@@ -61,10 +61,7 @@ namespace RestaurantReviewsAutomation.PageObjects
         }
         public static void goWebsite()
         {
-            ChromeOptions options = new ChromeOptions();
-            options.AddArguments(new List<string> {
-                "--start-maximized"});
-            driver = new ChromeDriver(options);
+            driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl(RestaurantWebsite);
         }
         public static RestaurantsPage goToRestaurantPage()

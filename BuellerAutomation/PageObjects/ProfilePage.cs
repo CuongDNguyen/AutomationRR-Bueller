@@ -59,8 +59,8 @@ namespace BuellerAutomation.PageObjects
             login_Email = driver.FindElement(By.Id("email"));
             login_Password = driver.FindElement(By.Id("Password"));
             login_Button = driver.FindElement(By.Id("btnSubmit"));
-            login_Email.SendKeys("automationStudent1@ruralsourcing.com");
-            login_Password.SendKeys("automation123!");
+            login_Email.SendKeys("studentauto6@ruralsourcing.com");
+            login_Password.SendKeys("automation123!123");
             Thread.Sleep(2000);
             login_Button.Click();
             return new ProfilePage(driver);
@@ -72,7 +72,7 @@ namespace BuellerAutomation.PageObjects
             login_Email = driver.FindElement(By.Id("email"));
             login_Password = driver.FindElement(By.Id("Password"));
             login_Button = driver.FindElement(By.Id("btnSubmit"));
-            login_Email.SendKeys("teachernewauto31234@ruralsourcing.com");
+            login_Email.SendKeys("teacher6@ruralsourcing.com");
             login_Password.SendKeys("automation123!123");
             Thread.Sleep(2000);
             login_Button.Click();
