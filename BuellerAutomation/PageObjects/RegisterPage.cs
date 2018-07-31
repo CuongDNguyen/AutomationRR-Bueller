@@ -100,7 +100,7 @@ namespace BuellerAutomation.PageObjects
             register_Password = driver.FindElement(By.Id("Password"));
             register_Role = driver.FindElement(By.Id("role"));
             register_Button = driver.FindElement(By.XPath("/html/body/div[2]/form/div/div[5]/div/input"));
-            register_Email.SendKeys("studentauto22@ruralsourcing.com");
+            register_Email.SendKeys("studentauto23@ruralsourcing.com");
             register_Password.SendKeys("automation123!123");
             register_ConfirmPassword = driver.FindElement(By.Id("ConfirmPassword"));
             register_ConfirmPassword.SendKeys("automation123!123");
@@ -149,7 +149,7 @@ namespace BuellerAutomation.PageObjects
             register_Password = driver.FindElement(By.Id("Password"));
             register_Role = driver.FindElement(By.Id("role"));
             register_Button = driver.FindElement(By.XPath("/html/body/div[2]/form/div/div[5]/div/input"));
-            register_Email.SendKeys("teacher24@ruralsourcing.com");
+            register_Email.SendKeys("teacher25@ruralsourcing.com");
             register_Password.SendKeys("automation123!123");
             register_ConfirmPassword = driver.FindElement(By.Id("ConfirmPassword"));
             register_ConfirmPassword.SendKeys("automation123!123");
@@ -213,7 +213,7 @@ namespace BuellerAutomation.PageObjects
             login_Email = driver.FindElement(By.Id("email"));
             login_Password = driver.FindElement(By.Id("Password"));
             login_Button = driver.FindElement(By.Id("btnSubmit"));
-            login_Email.SendKeys("studentauto20@ruralsourcing.com");
+            login_Email.SendKeys("studentauto23@ruralsourcing.com");
             login_Password.SendKeys("automation123!123");
             Thread.Sleep(2000);
             login_Button.Click();
@@ -301,7 +301,7 @@ namespace BuellerAutomation.PageObjects
             login_Email = driver.FindElement(By.Id("email"));
             login_Password = driver.FindElement(By.Id("Password"));
             login_Button = driver.FindElement(By.Id("btnSubmit"));
-            login_Email.SendKeys("teacher19@ruralsourcing.com");
+            login_Email.SendKeys("teacher25@ruralsourcing.com");
             login_Password.SendKeys("automation123!123");
             Thread.Sleep(2000);
             login_Button.Click();
